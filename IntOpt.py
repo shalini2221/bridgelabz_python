@@ -1,8 +1,8 @@
 def main():
     # Taking input values
-    a = int(input("Enter value for a: "))
-    b = int(input("Enter value for b: "))
-    c = int(input("Enter value for c: "))
+    a = user_input_int()
+    b = user_input_int()
+    c = user_input_int()
 
     # Integer operations
     result1 = a + b * c       # b * c first, then added to a
