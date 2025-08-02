@@ -58,4 +58,5 @@ def checkLeapYear(int year):
 			return "not a Leap Year"
         else:
 
-            return "You have entered a wrong year"
+
+            return "Wrong year"
