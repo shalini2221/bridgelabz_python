@@ -37,7 +37,8 @@ def inputString1():
 	
 def inputInteger():
 		return scanner.nextInt()
-	
+
+# LeapYear.py
 def leapYearCheaker(int year):
 	if(year>1582):
 		   if year % 400 == 0 or year % 4 == 0 & year % 100 != 0:
@@ -60,6 +61,8 @@ def checkLeapYear(int year):
 
 
             return "Wrong year"
+
+# SpringSeason.py
 import sys
 
 # Check if enough command-line arguments are provided
@@ -77,6 +80,7 @@ if (m == 3 and d >= 20) or (m == 4) or (m == 5) or (m == 6 and d <= 20):
 else:
     print("false")
 
+# Stats.py
 import random
 
 # Generate 5 random numbers between 0 and 1
@@ -95,3 +99,29 @@ for i, val in enumerate(values, 1):
 print(f"\nAverage: {average}")
 print(f"Minimum: {minimum}")
 print(f"Maximum: {maximum}")
+
+# WindChill.py
+import sys
+import math
+
+# Check for correct number of arguments
+if len(sys.argv) != 3:
+    print("Usage: python WindChill.py <temperature> <wind speed>")
+    sys.exit(1)
+
+# Parse command-line arguments
+t = float(sys.argv[1])  # Temperature in Fahrenheit
+v = float(sys.argv[2])  # Wind speed in miles per hour
+
+# Validate input range
+if abs(t) > 50 or v <= 3:
+    print("Formula is not valid for |t| > 50 or v <= 3.")
+    sys.exit(1)
+
+# Compute wind chill using the formula
+wind_chill = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * math.pow(v, 0.16)
+
+# Print result
+print(f"Temperature: {t}°F")
+print(f"Wind Speed: {v} mph")
+print(f"Wind Chill: {wind_chill:.2f}°F")
