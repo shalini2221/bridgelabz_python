@@ -22,3 +22,4 @@ wind_chill = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * math.pow(v, 0.16)
 print(f"Temperature: {t}°F")
 print(f"Wind Speed: {v} mph")
 print(f"Wind Chill: {wind_chill:.2f}°F")
+
